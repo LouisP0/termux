@@ -14,9 +14,9 @@ function install_zsh() {
 			git clone https://github.com/robbyrussell/oh-my-zsh.git "$HOME/.oh-my-zsh" --depth 1 --quiet >/dev/null
 		fi
 	fi
-	curl -fsLo "$HOME/.oh-my-zsh/themes/lambda-mod.zsh-theme" https://cdn.rawgit.com/onlurking/termux/master/.termux/lambda-mod.zsh-theme
-	curl -fsLo "$HOME/.zshrc" https://cdn.rawgit.com/onlurking/termux/master/.termux/.zshrc
-	curl -fsLo "$HOME/.profile" https://cdn.rawgit.com/onlurking/termux/master/.termux/.profile
+	curl -fsLo "$HOME/.oh-my-zsh/themes/lambda-mod.zsh-theme" https://cdn.rawgit.com/LouisP0/termux/master/.termux/lambda-mod.zsh-theme
+	curl -fsLo "$HOME/.zshrc" https://cdn.rawgit.com/LouisP0/termux/master/.termux/.zshrc
+	curl -fsLo "$HOME/.profile" https://cdn.rawgit.com/LouisP0/termux/master/.termux/.profile
 	if [ ! -d "$HOME/.oh-my-zsh/plugins/zsh-syntax-highlighting" ]; then
 		if ask "\\e[32m[ oh-my-zsh ]\\e[m enable syntax highlighting?" Y; then
 			echo -e "\\e[32m[ oh-my-zsh ]\\e[m downloading plugin"
@@ -90,12 +90,12 @@ function install_requirements() {
 	if [ -d "$HOME/.termux" ]; then
 		if ask "\\e[32m[ termux ]\\e[m configs found, overwrite?" Y; then
 			rm -rf "$HOME/.termux"
-			curl -fsLo "$HOME/.termux/colors.properties" --create-dirs https://cdn.rawgit.com/onlurking/termux/master/.termux/colors.properties
-			curl -fsLo "$HOME/.termux/font.ttf" --create-dirs https://cdn.rawgit.com/onlurking/termux/master/.termux/font.ttf
+			curl -fsLo "$HOME/.termux/colors.properties" --create-dirs https://cdn.rawgit.com/LouisP0/termux/master/.termux/colors.properties
+			curl -fsLo "$HOME/.termux/font.ttf" --create-dirs https://cdn.rawgit.com/LouisP0/termux/master/.termux/font.ttf
 		fi
 	else
-		curl -fsLo "$HOME/.termux/colors.properties" --create-dirs https://cdn.rawgit.com/onlurking/termux/master/.termux/colors.properties
-		curl -fsLo "$HOME/.termux/font.ttf" --create-dirs https://cdn.rawgit.com/onlurking/termux/master/.termux/font.ttf
+		curl -fsLo "$HOME/.termux/colors.properties" --create-dirs https://cdn.rawgit.com/LouisP0/termux/master/.termux/colors.properties
+		curl -fsLo "$HOME/.termux/font.ttf" --create-dirs https://cdn.rawgit.com/LouisP0/termux/master/.termux/font.ttf
 	fi
 }
 
@@ -150,9 +150,9 @@ function install_neovim() {
 		fi
 		gem install neovim >/dev/null 2>&1
 	fi
-	curl -fsLo "$HOME/.config/nvim/autoload/plug.vim" --create-dirs https://cdn.rawgit.com/onlurking/termux/master/.termux/nvim/autoload/plug.vim
-	curl -fsLo "$HOME/.config/nvim/colors/Tomorrow-Night-Eighties.vim" --create-dirs https://cdn.rawgit.com/onlurking/termux/master/.termux/nvim/colors/Tomorrow-Night-Eighties.vim
-	curl -fsLo "$HOME/.config/nvim/init.vim" --create-dirs https://cdn.rawgit.com/onlurking/termux/master/.termux/nvim/init.vim
+	curl -fsLo "$HOME/.config/nvim/autoload/plug.vim" --create-dirs https://cdn.rawgit.com/LouisP0/termux/master/.termux/nvim/autoload/plug.vim
+	curl -fsLo "$HOME/.config/nvim/colors/Tomorrow-Night-Eighties.vim" --create-dirs https://cdn.rawgit.com/LouisP0/termux/master/.termux/nvim/colors/Tomorrow-Night-Eighties.vim
+	curl -fsLo "$HOME/.config/nvim/init.vim" --create-dirs https://cdn.rawgit.com/LouisP0/termux/master/.termux/nvim/init.vim
 }
 
 function install_ruby() {
@@ -169,7 +169,7 @@ function install_tmux() {
 		echo -e "\\e[32m[ tmux ]\\e[m not found, installing"
 		apt-get install -y tmux >/dev/null 2>&1
 	fi
-	curl -fsLo "$HOME/.tmux.conf" https://raw.githubusercontent.com/onlurking/termux/master/.termux/.tmux.conf
+	curl -fsLo "$HOME/.tmux.conf" https://raw.githubusercontent.com/LouisP0/termux/master/.termux/.tmux.conf
 }
 
 function install_python() {
@@ -177,7 +177,7 @@ function install_python() {
 		echo -e "\\e[32m[ python ]\\e[m not found, installing"
 		apt-get install -y python python-dev >/dev/null 2>&1
 	fi
-	curl -fsLo "$HOME/.pythonrc" https://cdn.rawgit.com/onlurking/termux/master/.termux/.pythonrc
+	curl -fsLo "$HOME/.pythonrc" https://cdn.rawgit.com/LouisP0/termux/master/.termux/.pythonrc
 }
 
 function install_php() {
