@@ -227,11 +227,12 @@ function ask() {
 
 function start() {
 	clear
-	echo -e "\\n  ▓▓▓▓▓▓▓▓▓▓▓▓"
-	echo -e " ░▓    about ▓ custom termux config files"
-	echo -e " ░▓   author ▓ onlurking <diogofelix@acm.org>"
-	echo -e " ░▓     code ▓ https://git.io/termux"
-	echo -e " ░▓▓▓▓▓▓▓▓▓▓▓▓"
+	echo -e "\\n  ▓▓▓▓▓▓▓▓▓▓▓▓▓"
+	echo -e " ░▓     about ▓ custom termux config files"
+	echo -e " ░▓    author ▓ onlurking <diogofelix@acm.org>"
+        echo -e " ░▓ forked by ▓ LouisP0"
+	echo -e " ░▓      code ▓ https://github.com/LouisP0/termux"
+	echo -e " ░▓▓▓▓▓▓▓▓▓▓▓▓▓"
 	echo -e " ░░░░░░░░░░░░\\n"
 }
 
