@@ -176,6 +176,7 @@ function install_python() {
 	if ! [ -x "$(command -v python)" ]; then
 		echo -e "\\e[32m[ python ]\\e[m not found, installing"
 		apt-get install -y python python-dev >/dev/null 2>&1
+                apt-get install -y bpython
 	fi
 	curl -fsLo "$HOME/.pythonrc" https://raw.githubusercontent.com/LouisP0/termux/master/.termux/.pythonrc
 }
